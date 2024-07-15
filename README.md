@@ -1,3 +1,6 @@
+# About
+This repository contains pure-python + numpy + numba efficient implementation of fft - based polynomial evaluation, that works 2-3 times faster than `numpy` default implementation
+
 # Showcase
 
 ```py
@@ -11,11 +14,11 @@ y1=pol.evaluate(x) # takes ~26 sec
 ```
 
 ```py
-y2=pol.evaluate_fft(x) # takes ~2.5 sec
+y3=np.polyval(coefs[::-1],x) # takes ~6 sec
 ```
 
 ```py
-y3=np.polyval(coefs[::-1],x) # takes ~6 sec
+y2=pol.evaluate_fft(x) # takes ~2.5 sec
 ```
 
 Results difference
