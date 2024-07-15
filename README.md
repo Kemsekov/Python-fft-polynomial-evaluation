@@ -14,11 +14,12 @@ y1=pol.evaluate(x) # takes ~6.6sec
 ```
 
 ```py
-y3=np.polyval(coefs[::-1],x) # takes ~6.7 sec
+y2=pol.evaluate_fft(x) # takes ~6.7 sec
+
 ```
 
 ```py
-y2=pol.evaluate_fft(x) # takes ~11.1 sec
+y3=np.polyval(coefs[::-1],x) # takes ~11.1 sec
 ```
 
 Results difference
